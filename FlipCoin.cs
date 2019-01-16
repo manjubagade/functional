@@ -38,7 +38,7 @@ namespace Functional
                         ta++;
                     }
                 }
-                //// print valuses of head
+                //// print valuses of head values 
                 Console.WriteLine(h);
                 //// print valuss of  tails
                 Console.WriteLine(ta);

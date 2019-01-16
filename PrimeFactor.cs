@@ -35,10 +35,16 @@ namespace Functional
 
                     if (c == 2)
                     {
+                        int values = 1;
                         while (num % i == 0)
                         {
-                            Console.WriteLine(i);
-                            num /= i;
+                            if (values == 1)
+                            {
+                                Console.WriteLine(i);
+                                values++;
+                                    
+                            }
+                            num = num / i;
                         }
                     }
                 }

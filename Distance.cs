@@ -10,13 +10,14 @@ namespace Functional
     /// <summary>
     /// this class is used to find the distance from point to origin
     /// </summary>
-    class Distance
+   public class Distance
     {
         /// <summary>
         /// Distances from origin.
         /// </summary>
         public void DistanceToOrigin()
         {
+            //// take the values of x from user inputs
             Console.WriteLine("enter the valus of x");
             int x = Utility.GetInt();
             Console.WriteLine("enter the value of y");
@@ -27,4 +28,3 @@ namespace Functional
         }
     }
  }
-

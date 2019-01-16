@@ -26,12 +26,12 @@ namespace Functional
         /// <summary>
         /// Swaps the specified character
         /// </summary>
-        /// <param name="words">The character.</param>
-        /// <param name="i">The i.</param>
-        /// <param name="j">The j.</param>
+        /// <param name="str"> the character </param>
+        /// <param name="i">  the i </param>
+        /// <param name="j"> the j </param>
         private static void Swap(char[] str, int i, int j)
         {
-            char temp =str[i];
+            char temp = str[i];
             str[i] = str[j];
             str[j] = temp;
         }
@@ -41,8 +41,8 @@ namespace Functional
         /// <summary>
         /// Permutation the specified character
         /// </summary>
-        /// <param name="words">The character </param>
-        /// <param name="currentIndex">Index of the current.</param>
+        /// <param name="str">The character </param>
+        /// <param name="c">Index of the current.</param>
         private static void Permutation(char[] str, int c)
         {
             if (c == str.Length - 1)

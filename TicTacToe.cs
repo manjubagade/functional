@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TicTocToe.cs" company="CompanyName">
+// <copyright file="TicTacToe.cs" company="brigdelabz">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -10,16 +10,18 @@ namespace Functional
     /// <summary>
     /// this class is used for implementing tic toc toe game
     /// </summary>
-    class TicTacToe
+    public class TicTacToe
     {
         /// <summary>
         /// game array is used to store the values that are given by the player and computer
         /// </summary>
           private char[,] game = { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
+
         /// <summary>
         /// count is used to number of positions is filled in game array
         /// </summary>
         private int count = 0;
+
         /// <summary>
         /// player symbol is used to assign a symbol for the player
         /// </summary>
@@ -168,7 +170,3 @@ namespace Functional
         }
     }
 }
-
-
-   
-

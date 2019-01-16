@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="FlipCoin.cs" company="CompanyName">
+// <copyright file="FlipCoin.cs" company="BridgeLabz">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -18,30 +18,38 @@ namespace Functional
         /// </summary>
         public void Flip()
         {
-            ////taking number of times to flip a coin
-            Console.WriteLine("enter number of times to flip");
-            int t = Convert.ToInt32(Console.ReadLine());
-            Random rd = new Random();
-            int h = 0;
-            int ta = 0;
-            for (int i = 1; i <= t; i++)
+            try
             {
-                int val = rd.Next(1, 3);
-                if (val < 1.5)
+                ////taking number of times to flip a coin
+                Console.WriteLine("enter number of times to flip");
+                int t = Convert.ToInt32(Console.ReadLine());
+                Random rd = new Random();
+                int h = 0;
+                int ta = 0;
+                for (int i = 1; i <= t; i++)
                 {
-                    h++;
+                    int val = rd.Next(1, 3);
+                    if (val < 1.5)
+                    {
+                        h++;
+                    }
+                    else
+                    {
+                        ta++;
+                    }
                 }
-                else
-                {
-                    ta++;
-                }
+                //// print valuses of head
+                Console.WriteLine(h);
+                //// print valuss of  tails
+                Console.WriteLine(ta);
+                Console.WriteLine(" percentage is tails " + ((ta * 100) / t));
+                Console.WriteLine(" percentage is heads " + ((h * 100) / t));
+                Console.ReadLine();
             }
-
-            Console.WriteLine(h);
-            Console.WriteLine(ta);
-            Console.WriteLine(" percentage is tails " + ((ta * 100) / t));
-            Console.WriteLine(" percentage is heads " + ((h * 100) /  t));
-            Console.ReadLine();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

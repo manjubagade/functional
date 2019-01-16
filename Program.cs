@@ -1,17 +1,16 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Programs.cs" company="Bridgelabz">
+// <copyright file="Program.cs" company="Bridgelabz">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
 namespace Functional
 {
-    using Functional;
-    using System;
+     using System;
 
     /// <summary>
     /// this class is used to run all the programs
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
         /// Defines the entry point of the application
@@ -35,13 +34,9 @@ namespace Functional
                 Console.WriteLine("PRESS 11  :   FINDING THE DISTANCE FROM POINT TO ORIGION");
                 Console.WriteLine("PRESS 12  :   FINDING THE PERMUTATIONS STRING");
                 Console.WriteLine("PRESS 13  :   TO STOPWATCH");
-                Console.WriteLine("PRESS 14  :   ");
+                Console.WriteLine("PRESS 14  :   TO TIK TOC PROBLES ");
                 Console.WriteLine("PRESS 15  :   TO QUEDRATIC ROOT");
                 Console.WriteLine("PRESS 16  :   TO Windchill prg");
-
-
-
-
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
                 {
@@ -110,9 +105,11 @@ namespace Functional
                         wc.CalculateWindChill();
                         break;
                         }
+
                 Console.WriteLine("ENTER Y TO CONTINUES N TO STOP ");
                 condition = Convert.ToChar(Console.ReadLine());
-            } while (condition == 'y');
+            }
+            while (condition == 'y');
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Functional
     /// <summary>
     /// this class is used for declaring repeated task
     /// </summary>
-    class Utility
+   public class Utility
     {
         /// <summary>
         /// Gets the integer will return the integer value
@@ -33,6 +33,10 @@ namespace Functional
             return d;
         }
 
+        /// <summary>
+        /// get string will return the string values
+        /// </summary>
+        /// <returns> returns string value required by the programmer</returns>
         public static string GetString()
         {
             string s = Convert.ToString(Console.ReadKey());

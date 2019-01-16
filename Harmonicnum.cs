@@ -17,15 +17,25 @@ namespace Functional
         /// </summary>
         public void Harmonic()
         {
-            Console.WriteLine("enter the Nth harmonic number");
-            int n = Utility.GetInt();
-            float num = 0;
-            for (int i = 1; i <= n; i++)
+            try
             {
-                num = num + (float)(1.0 / i);
+                //// take the number of user of up to nth harmonic 
+                Console.WriteLine("enter the Nth harmonic number");
+                int n = Utility.GetInt();
+                float num = 0;
+                for (int i = 1; i <= n; i++)
+                {
+                    //// calculate the values of given number
+                    num = num + (float)(1.0 / i);
+                }
+                //// printed the values for upto to given number
+                Console.WriteLine(" the Nth harmonic number is " + num);
+                Console.ReadLine();
             }
-            Console.WriteLine(" the Nth harmonic number is " + num);
-            Console.ReadLine();
+            catch (NotFiniteNumberException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

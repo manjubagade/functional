@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="AddsToZero.cs" company="CompanyName">
+// <copyright file="AddToZeros.cs" company="bridgelabz">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -17,36 +17,43 @@ namespace Functional
         /// </summary>
         public void Add3NumbersToZero()
         {
-            Console.WriteLine("enter the number of elements");
-            int num = Utility.GetInt();
-            int[] array = new int[num];
-            ////taking the array elements from console
-            Console.WriteLine("enter array elements");
-            ////this loop is used for storing the array elements
-            for (int i = 0; i < num; i++)
+            try
             {
-                array[i] = Utility.GetInt();
-            }
-
-            int sum = 0;
-            for (int i = 0; i < num; i++)
-            {
-                for (int j = 0; j < num - 1; j++)
+                Console.WriteLine("enter the number of elements");
+                int num = Utility.GetInt();
+                int[] array = new int[num];
+                ////taking the array elements from console
+                Console.WriteLine("enter array elements");
+                ////this loop is used for storing the array elements
+                for (int i = 0; i < num; i++)
                 {
-                    for (int k = 0; k < num - 2; k++)
+                    array[i] = Utility.GetInt();
+                }
+
+                int sum = 0;
+                for (int i = 0; i < num; i++)
+                {
+                    for (int j = 0; j < num - 1; j++)
                     {
-                        if (array[i] + array[j] + array[k] == 0)
+                        for (int k = 0; k < num - 2; k++)
                         {
-                            sum++;
-                            Console.WriteLine(" distinct   triplets " + array[i] + "," + array[j] + "," + array[k]);
+                            if (array[i] + array[j] + array[k] == 0)
+                            {
+                                sum++;
+                                Console.WriteLine(" distinct   triplets " + array[i] + "," + array[j] + "," + array[k]);
+                            }
                         }
                     }
                 }
-            }
 
-            Console.WriteLine();
-            Console.WriteLine("number of distinct triplets " + sum);
-            Console.ReadLine();
+                Console.WriteLine();
+                Console.WriteLine("number of distinct triplets " + sum);
+                Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

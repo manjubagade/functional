@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PrimeFactors.cs" company="bridgelabz">
+// <copyright file="PrimeFactor.cs" company="bridgelabz">
 //     Company copyright tag.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -17,30 +17,38 @@ namespace Functional
         /// </summary>
         public void Prime_Factors()
         {
-            Console.WriteLine("enter number to find prime factors");
-            int num = Utility.GetInt();
-            for (int i = 1; i <= num; i++)
+            try
             {
-                int c = 0;
-                for (int j = 1; j <= i; j++)
+                //// take the input of user
+                Console.WriteLine("enter number to find prime factors");
+                int num = Utility.GetInt();
+                for (int i = 1; i <= num; i++)
                 {
-                    if (i % j == 0)
+                    int c = 0;
+                    for (int j = 1; j <= i; j++)
                     {
-                        c++;
+                        if (i % j == 0)
+                        {
+                            c++;
+                        }
+                    }
+
+                    if (c == 2)
+                    {
+                        while (num % i == 0)
+                        {
+                            Console.WriteLine(i);
+                            num /= i;
+                        }
                     }
                 }
 
-                if (c == 2)
-                {
-                    while (num % i == 0)
-                    {
-                        Console.WriteLine(i);
-                        num /= i;
-                    }
-                }
+                Console.ReadLine();
             }
-
-            Console.ReadLine();
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

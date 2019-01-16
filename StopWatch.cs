@@ -42,7 +42,6 @@ namespace Functional
             {
                 this.Stop();
             }
-
             ////printing the elapse time
             Console.WriteLine("elapsed time is " + (this.stoptime - this.starttime));
             Console.ReadLine();

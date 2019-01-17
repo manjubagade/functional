@@ -20,7 +20,7 @@ namespace Functional
         {
             try
             {
-                ////taking number of times to flip a coin
+                ////take the input from user for times to flip a coin
                 Console.WriteLine("enter number of times to flip");
                 int t = Convert.ToInt32(Console.ReadLine());
                 Random rd = new Random();

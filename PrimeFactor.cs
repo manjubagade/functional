@@ -44,7 +44,7 @@ namespace Functional
                                 values++;
                                     
                             }
-                            num = num / i;
+                            num=num/i;
                         }
                     }
                 }

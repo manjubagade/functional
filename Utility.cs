@@ -39,7 +39,7 @@ namespace Functional
         /// <returns> returns string value required by the programmer</returns>
         public static string GetString()
         {
-            string s = Convert.ToString(Console.ReadKey());
+            string s = Convert.ToString(Console.ReadLine());
             return s;
         }
     }  
